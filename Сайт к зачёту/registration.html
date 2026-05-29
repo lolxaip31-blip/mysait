@@ -1,0 +1,255 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Russport - Регистрация</title>
+    <style>
+        body { font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 20px; background-color: #e6e6e6; }
+        .main-table { width: 1000px; border-collapse: collapse; background: white; border: 1px solid #999; margin: 0 auto; }
+        td { padding: 10px; }
+        .header { background: #ccc; text-align: center; }
+        .sidebar { background: #f0f0f0; width: 20%; vertical-align: top; }
+        .content { width: 60%; vertical-align: top; }
+        .product-img { width: 120px; height: 80px; cursor: pointer; transition: opacity 0.3s; }
+        .product-img:hover { opacity: 0.8; }
+        .product-cell { cursor: pointer; transition: background-color 0.3s; }
+        .product-cell:hover { background-color: #e0e0e0; }
+        .menu-link { color: #0000cc; cursor: pointer; text-decoration: underline; margin: 0 5px; }
+        .menu-link:hover { color: #ff0000; }
+        .back-button { 
+            display: inline-block; 
+            margin-bottom: 15px; 
+            padding: 5px 15px; 
+            background: #ccc; 
+            cursor: pointer; 
+            border: 1px solid #999;
+            border-radius: 3px;
+            text-decoration: none;
+            color: black;
+        }
+        .back-button:hover { background: #bbb; }
+        .product-detail-img { max-width: 100%; height: auto; border: 1px solid #ccc; padding: 5px; }
+        .map-frame { width: 100%; height: 200px; border: 1px solid #ccc; }
+        .reg-table { width: 100%; border-collapse: collapse; }
+        .reg-table td { padding: 8px; border: none; }
+        .reg-table input[type="text"], 
+        .reg-table input[type="password"],
+        .reg-table select, 
+        .reg-table textarea { 
+            width: 95%; 
+            padding: 5px; 
+            border: 1px solid #999; 
+            background: white;
+        }
+        .reg-table input[type="radio"], .reg-table input[type="checkbox"] { margin-right: 5px; }
+        .reg-button { 
+            background: #ccc; 
+            border: 1px solid #999; 
+            padding: 7px 25px; 
+            cursor: pointer; 
+            font-weight: bold; 
+            margin-right: 10px;
+        }
+        .reg-button:hover { background: #bbb; }
+        .error-text { color: red; font-size: 12px; margin-top: 3px; }
+    </style>
+</head>
+<body>
+    <center>
+        <table class="main-table" border="1" cellpadding="10" cellspacing="0" bordercolor="#20B2AA" bgcolor="#20B2AA">
+            <!-- МЕНЮ -->
+            <tr>
+                <td colspan="3" class="header">
+                    <font size="4"><b>Mazda</b></font>
+                  
+                </td>
+            </tr>
+
+            <!-- ОСНОВНАЯ ЧАСТЬ -->
+            <tr>
+                <!-- ЛЕВЫЙ САЙДБАР -->
+                <td class="sidebar">
+                    <font size="4"><b>Авторизация</b></font>
+                    <br><br>
+                    <form>
+                        Логин:<br>
+                        <input type="text" size="15"><br>
+                        Пароль:<br>
+                        <input type="password" size="15"><br><br>
+                        <input type="button" value="Войти"> | 
+                        <a href="login.html">Регистрация</a>
+                    </form>
+                    
+                    <br>
+                
+                    <br><br>
+                    <table width="100%" border="0" cellpadding="5">
+                        
+                            <td align="center">
+                          
+                             
+                            </td>
+                       
+                     
+                            <td align="center">
+                                
+                                
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+
+                <!-- ЦЕНТРАЛЬНЫЙ КОНТЕНТ - РЕГИСТРАЦИЯ -->
+                <td class="content" id="content-area">
+                    <!-- Кнопка возврата -->
+                    <a href="javascript:history.back()" class="back-button">← Вернуться назад</a>
+                    
+                    <font size="5"><b>Регистрация нового пользователя</b></font>
+                    <br><br>
+                    
+                    <form onsubmit="alert('Регистрация успешно завершена! (демонстрация)'); return false;">
+                        <table class="reg-table">
+                            <!-- Фамилия -->
+                            <tr>
+                                <td width="30%"><b>Фамилия:</b> <font color="red">*</font></td>
+                                <td><input type="text" placeholder="Введите фамилию" required></td>
+                            </tr>
+                            <!-- Имя -->
+                            <tr>
+                                <td><b>Имя:</b> <font color="red">*</font></td>
+                                <td><input type="text" placeholder="Введите имя" required></td>
+                            </tr>
+                            <!-- Отчество -->
+                            <tr>
+                                <td><b>Отчество:</b></td>
+                                <td><input type="text" placeholder="Введите отчество"></td>
+                            </tr>
+                            <!-- Пол -->
+                            <tr>
+                                <td><b>Пол:</b> <font color="red">*</font></td>
+                                <td>
+                                    <input type="radio" name="gender" id="male" checked> <label for="male">Мужской</label>
+                                    <input type="radio" name="gender" id="female"> <label for="female">Женский</label>
+                                </td>
+                            </tr>
+                            <!-- Страна -->
+                            <tr>
+                                <td><b>Страна проживания:</b> <font color="red">*</font></td>
+                                <td>
+                                    <select required>
+                                        <option value="">-- Выберите страну --</option>
+                                        <option value="ru">Россия</option>
+                                        <option value="by">Беларусь</option>
+                                        <option value="kz">Казахстан</option>
+                                        <option value="ua">Украина</option>
+                                        <option value="am">Армения</option>
+                                        <option value="kg">Кыргызстан</option>
+                                        <option value="uz">Узбекистан</option>
+                                        <option value="other">Другая</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <!-- Дата рождения (добавлена для полноты) -->
+                            <tr>
+                                <td><b>Дата рождения:</b></td>
+                                <td><input type="date"></td>
+                            </tr>
+                            <!-- Email для связи -->
+                            <tr>
+                                <td><b>E-mail:</b> <font color="red">*</font></td>
+                                <td><input type="text" placeholder="example@mail.ru" required></td>
+                            </tr>
+                            <!-- Пароль -->
+                            <tr>
+                                <td><b>Пароль:</b> <font color="red">*</font></td>
+                                <td><input type="password" placeholder="минимум 6 символов" required minlength="6"></td>
+                            </tr>
+                            <!-- Подтверждение пароля -->
+                            <tr>
+                                <td><b>Подтверждение пароля:</b> <font color="red">*</font></td>
+                                <td><input type="password" placeholder="повторите пароль" required></td>
+                            </tr>
+                            <!-- Согласие с политикой -->
+                            <tr>
+                                <td colspan="2" style="border-top: 1px dashed #999; padding-top: 15px;">
+                                    <input type="checkbox" id="agree" required> 
+                                    <label for="agree">Я согласен с <a href="#" onclick="alert('Демонстрация: политика конфиденциальности'); return false;">политикой обработки персональных данных</a> и правилами сайта <font color="red">*</font></label>
+                                </td>
+                            </tr>
+                            <!-- Дополнительная информация (по желанию) -->
+                            <tr>
+                                <td colspan="2">
+                                    <font size="2" color="#666">* - поля, обязательные для заполнения</font>
+                                </td>
+                            </tr>
+                            <!-- Кнопки -->
+                            <tr>
+                                <td colspan="2" align="center" style="padding-top: 20px;">
+                                    <input type="submit" value="Зарегистрироваться" class="reg-button">
+                                    <input type="reset" value="Очистить форму" class="reg-button">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                    
+                    <br>
+                    <!-- Дополнительный блок с информацией о регистрации -->
+                    <table width="100%" border="1" cellpadding="10" bgcolor="#f9f9f9" bordercolor="#cccccc">
+                        <tr>
+                            <td>
+                                <font size="3"><b>Зачем регистрироваться?</b></font>
+                                <ul>
+                                    <li>Отслеживать статус заказа</li>
+                                    <li>Получать персональные скидки</li>
+                                    <li>Участвовать в программе лояльности</li>
+                                    <li>Быстрое оформление заказов</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+
+                <!-- ПРАВЫЙ САЙДБАР -->
+                <td class="sidebar">
+                    <font size="4"><b>Это интересно</b></font>
+                    
+                    <p>Не стоит придерживаться ошибочного мнения, что спортивное питание – это специализированные добавки, предназначенные только для подготовленных спортсменов.</p>
+                    
+                    <table width="100%" border="1" cellpadding="5" bgcolor="#ffffff" bordercolor="#cccccc">
+                        <tr class="product-cell" onclick="window.location.href='index.html#creatine'">
+                            <td>
+                                <b>Советы эксперта</b><br>
+                                <font size="2">как правильно принимать креатин</font>
+                            </td>
+                        </tr>
+                        <tr class="product-cell" onclick="window.location.href='index.html#geyner'">
+                            <td>
+                                <b>Хит продаж</b><br>
+                                <font size="2">гейнер для набора массы</font><br>
+                                <b><font color="#006600">закажи со скидкой</font></b>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- ПОДВАЛ -->
+            <tr>
+                <td colspan="3" class="header">
+                    <a href="mailto:info@sportpit.ru">info@Russport.ru</a> | 
+                    <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+                    <br><br>
+                    <font size="2">Russport - магазин спортивного питания. ПОСТАВЬТЕ 5 ПОЖАЛУЙСТА</font>
+                </td>
+            </tr>
+        </table>
+    </center>
+
+    <div align="center" style="margin-top: 10px;">
+        <font size="1">Russport - регистрация</font>
+    </div>
+
+    <script>
+        
+</body>
+</html>
